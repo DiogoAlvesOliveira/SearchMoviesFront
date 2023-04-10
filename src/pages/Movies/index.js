@@ -32,11 +32,11 @@ export default function Movies() {
         title,
       });
     }else if(isFavorite){
-      const { data } = await axios.delete(`/movies/delete/${title}`);
+      const { data } = await axios.delete(`/movies/${title}`);
     }
     setIsFavorite(!isFavorite)
   }
-  
+
   return (
     <>
       <Container>
